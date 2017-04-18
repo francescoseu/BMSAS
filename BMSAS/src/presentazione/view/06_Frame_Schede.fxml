@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentazione.view.SchedaController">
+   <children>
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="251.0" text="Scheda Descrittiva" wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonNuovaScheda" layoutX="507.0" layoutY="20.0" mnemonicParsing="false" text="Nuova Scheda" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0" />
+      <Button fx:id="buttonApriScheda" layoutX="628.0" layoutY="20.0" mnemonicParsing="false" text="Apri Scheda" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="14.0" layoutY="57.0" prefHeight="27.0" prefWidth="76.0" text="Data: (*)" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="57.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateDataCompil" layoutX="91.0" layoutY="59.0" AnchorPane.leftAnchor="91.0" AnchorPane.topAnchor="59.0" />
+      <TabPane layoutX="10.0" layoutY="94.0" prefHeight="363.0" prefWidth="680.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="94.0">
+        <tabs>
+          <Tab closable="false" text="Dipendenti">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableDip" layoutX="14.0" layoutY="45.0" prefHeight="279.0" prefWidth="657.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                          <columns>
+                            <TableColumn fx:id="columnNomeDip" maxWidth="300.0" minWidth="190.0" prefWidth="190.0" text="Nome" />
+                            <TableColumn fx:id="columnCognomeDip" maxWidth="300.0" minWidth="150.0" prefWidth="150.0" text="Cognome" />
+                              <TableColumn fx:id="columnCFDip" maxWidth="218.0" minWidth="218.0" prefWidth="218.0" text="Codice Fiscale" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonElimAllDips" layoutX="523.0" layoutY="10.0" mnemonicParsing="false" text="Elimina Tutti" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="10.0" />
+                        <Button fx:id="buttonElimDip" layoutX="615.0" layoutY="10.0" mnemonicParsing="false" text="Elimina" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Strumenti">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableStrum" layoutX="14.0" layoutY="42.0" prefHeight="282.0" prefWidth="660.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                           <columns>
+                              <TableColumn fx:id="columnIDStrum" maxWidth="250.0" minWidth="100.0" prefWidth="100.0" text="ID" />
+                              <TableColumn fx:id="columnNomeStrum" maxWidth="250.0" minWidth="138.0" prefWidth="138.0" text="Nome" />
+                              <TableColumn fx:id="columnTipoStrum" maxWidth="250.0" minWidth="110.0" prefWidth="110.0" text="Tipo" />
+                              <TableColumn fx:id="columnModelloStrum" maxWidth="250.0" minWidth="110.0" prefWidth="110.0" text="Modello" />
+                              <TableColumn fx:id="columnMarcaStrum" maxWidth="180.0" minWidth="100.0" prefWidth="100.0" text="Marca" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonElimAllStrums" layoutX="523.0" layoutY="10.0" mnemonicParsing="false" text="Elimina Tutti" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="10.0" />
+                        <Button fx:id="buttonElimStrum" layoutX="615.0" layoutY="10.0" mnemonicParsing="false" text="Elimina" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Spazi">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableSpaz" layoutX="14.0" layoutY="39.0" prefHeight="285.0" prefWidth="660.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                           <columns>
+                              <TableColumn fx:id="columnIDSpaz" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="ID" />
+                              <TableColumn fx:id="columnNomeSpazio" maxWidth="300.0" minWidth="230.0" prefWidth="230.0" text="Nome" />
+                              <TableColumn fx:id="columnUbicazSpazio" maxWidth="300.0" minWidth="228.0" prefWidth="228.0" text="Ubicazione" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonElimAllSpazs" layoutX="523.0" layoutY="10.0" mnemonicParsing="false" text="Elimina Tutti" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="10.0" />
+                        <Button fx:id="buttonElimSpaz" layoutX="615.0" layoutY="10.0" mnemonicParsing="false" text="Elimina" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Testi Statici">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="174.0" orientation="VERTICAL" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea fx:id="textTestoIntrod" layoutX="208.0" layoutY="-62.0" prefHeight="98.0" prefWidth="578.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                                    <Label layoutX="10.0" layoutY="7.0" text="Testo Introduttivo" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="7.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label text="Testo Conclusivo" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="7.0" />
+                                    <TextArea fx:id="textTestoConclu" layoutX="115.0" layoutY="-51.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <Button fx:id="buttonSalvaTesti" layoutX="1.0" layoutY="207.0" mnemonicParsing="false" text="Salva Testi Statici" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="buttonEsportaScheda" layoutX="415.0" layoutY="365.0" mnemonicParsing="false" text="Esporta PDF" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="105.0" />
+      <Button fx:id="buttonSalvaScheda" layoutX="578.0" layoutY="465.0" mnemonicParsing="false" text="Salva Scheda" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentazione.view.MainPageController">
+   <left>
+      <ToolBar orientation="VERTICAL" BorderPane.alignment="CENTER">
+         <items>
+            <Button fx:id="homeButton" alignment="CENTER" mnemonicParsing="false" prefWidth="75.0" text="Home" />
+            <Button fx:id="dipendentiButton" contentDisplay="TOP" mnemonicParsing="false" text="Dipendenti">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/00_dipendente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="strumentiButton" contentDisplay="TOP" mnemonicParsing="false" text="Strumenti">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/01_strumento.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="spaziButton" contentDisplay="TOP" mnemonicParsing="false" text="Spazi">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/02_spazio.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="assegnaButton" contentDisplay="TOP" mnemonicParsing="false" text="Assegna">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/03_assegna.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="schedaButton" contentDisplay="TOP" mnemonicParsing="false" text="Scheda">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/04_scheda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" text="BMS Anagraphic System - V. 1.0.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="3.0" />
+               </HBox.margin>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="labelOra" text="Testo dinamico- ultima operazione effettuata - DATA ORA" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets right="3.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="menuItemLogout" mnemonicParsing="false" text="Logout" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuItemChiudi" mnemonicParsing="false" text="Chiudi" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Gestisci">
+               <items>
+                  <MenuItem fx:id="menuUtenti" mnemonicParsing="false" text="Utenti" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About BMS Anagraphic System" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
